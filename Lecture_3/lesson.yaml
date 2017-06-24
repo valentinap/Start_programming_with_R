@@ -1,0 +1,111 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 3
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+  
+
+- Class: text
+  Output: And here we go again! In this lesson we will see some exercises on matrices
+  
+- Class: text
+  Output: Press ENTER for the next questions. If you are having troubles with a question, you can always enter the skip() command to get the solution and skip to the next one
+
+- Class: cmd_question
+  Output: As you recall, matrices are created with the matrix() function. Enter numbers from 12 to 23 into the mat1 matrix, divided into 3 rows and 4 columns. The parameter for the number of rows is nrow, that for the number of columns ncol
+  CorrectAnswer: mat1 <- matrix(12:23, nrow=3, ncol=4)
+  AnswerTests: omnitest(correctExpr='mat1 <- matrix(12:23, nrow=3, ncol=4)')
+  Hint: Enter mat1 <- matrix(12:23, nrow=3, ncol=4)
+
+- Class: cmd_question
+  Output: Now create a mat2 object by translating the mat1 matrix with the t() function
+  CorrectAnswer: mat2 <- t(mat1)
+  AnswerTests: omnitest(correctExpr='mat2 <- t(mat1)')
+  Hint: Enter mat2 <- t(mat1)
+  
+- Class: cmd_question
+  Output: Find out the number of mat2 columns with the ncol() function
+  CorrectAnswer: ncol(mat2)
+  AnswerTests: omnitest(correctExpr='ncol(mat2)')
+  Hint: Enter ncol(mat2)
+  
+- Class: cmd_question
+  Output: Now find out the number of lines of mat2 with the nrow() function
+  CorrectAnswer: nrow(mat2)
+  AnswerTests: omnitest(correctExpr='nrow(mat2)')
+  Hint: Enter nrow(mat2)
+
+- Class: text
+  Output: You see? In mat1 we had 3 rows and 4 columns, in mat2 is the opposite. That means the matrix has been correctly transposed! 
+  
+- Class: cmd_question
+  Output: Create object car1 and insert letters from "a" to "n" inside
+  CorrectAnswer: car1 <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n")
+  AnswerTests: omnitest(correctExpr='car1 <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n")')
+  Hint: Enter car1 <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n")
+  
+- Class: cmd_question
+  Output: Organize the car1 object into a mat3 matrix with 4 rows and 3 columns. Use the matrix() function
+  CorrectAnswer: mat3 <- matrix(car1, nrow = 4, ncol = 3)
+  AnswerTests: omnitest(correctExpr='mat3 <- matrix(car1, nrow = 4, ncol = 3)')
+  Hint: Enter mat3 <- matrix(car1, nrow = 4, ncol = 3)
+  
+- Class: cmd_question
+  Output: Print the mat3 object without the print function()
+  CorrectAnswer: mat3
+  AnswerTests: omnitest(correctExpr='mat3')
+  Hint: Enter mat3
+  
+- Class: cmd_question
+  Output: To select an element from a matrix, we must indicate the position in the line first and then in the column. Select the element in the first row and in the first column. Remember to use square brackets and divide the position with a comma
+  CorrectAnswer: mat3[1,1]
+  AnswerTests: omnitest(correctExpr='mat3[1,1]')
+  Hint: Enter mat3[1,1]
+  
+- Class: cmd_question
+  Output: Select the second column
+  CorrectAnswer: mat3[,2]
+  AnswerTests: omnitest(correctExpr='mat3[,2]')
+  Hint: Enter mat3[,2]
+  
+- Class: cmd_question
+  Output: Now, select the lines from the first to the third included
+  CorrectAnswer: mat3[1:3,]
+  AnswerTests: omnitest(correctExpr='mat3[1:3,]')
+  Hint: Enter mat3[1:3,]
+
+- Class: cmd_question
+  Output: Let's retrieve the mat1 and mat2 matrices. As you remember (print them in the console, if you think it’s worth), one has four rows, the other has three. Let's sum up the first two rows and the first three columns of the two matrices. You will need to use subsetting as we have seen above, otherwise you will get an error message
+  CorrectAnswer: mat1[1:2, 1:3] + mat2[1:2, 1:3]
+  AnswerTests: omnitest(correctExpr='mat1[1:2, 1:3] + mat2[1:2, 1:3]')
+  Hint: Enter mat1[1:2, 1:3] + mat2[1:2, 1:3]
+  
+- Class: cmd_question
+  Output: Let's resume the mat3 matrix. Give the Col1, Col2, and Col3 names to the columns of the matrix with the colnames() function. Remember that they are strings, so they must be written in quotation marks!
+  CorrectAnswer: colnames(mat3) <- c("Col1", "Col2", "Col3")
+  AnswerTests: omnitest(correctExpr='colnames(mat3) <- c("Col1", "Col2", "Col3")')
+  Hint: Enter colnames(mat3) <- c("Col1", "Col2", "Col3")
+
+- Class: cmd_question
+  Output: Reprint the mat3 matrix
+  CorrectAnswer: mat3
+  AnswerTests: omnitest(correctExpr='mat3')
+  Hint: Enter mat3
+
+- Class: text
+  Output: And now the columns of our matrix have their own names!
+
+- Class: cmd_question
+  Output: Now create an r1 object that featuring three elements, "xy", "zx", "rx"
+  CorrectAnswer: r1 <- c("xy", "zx", "rx")
+  AnswerTests: omnitest(correctExpr='r1 <- c("xy", "zx", "rx")')
+  Hint: Enter r1 <- c("xy", "zx", "rx")
+  
+
+- Class: cmd_question
+  Output: Add the r1 element at the bottom of mat3 with the rbind function. Overwrite it with the mat3 name
+  CorrectAnswer: mat3 <- rbind(mat3, r1)
+  AnswerTests: omnitest(correctExpr='mat3 <- rbind(mat3, r1)')
+  Hint: Enter mat3 <- rbind(mat3, r1)

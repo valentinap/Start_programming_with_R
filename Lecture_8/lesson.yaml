@@ -1,0 +1,51 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 8
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+
+- Class: text_question
+  Output: Recall the dplyr package with library(dplyr)
+  CorrectAnswer: library(dplyr)
+  AnswerTests: omnitest(correctVal = 'library(dplyr)')
+  Hint: Prova con library(dplyr)
+  
+- Class: cmd_question
+  Output: We use the iris dataset. Select one (Sepal Length) and three (Petal.Length) columns with dplyr select() function
+  CorrectAnswer: select(iris, Sepal.Length, Petal.Length)
+  AnswerTests: omnitest(correctExpr='select(iris, Sepal.Length, Petal.Length)')
+  Hint: Prova con select(iris, Sepal.Length, Petal.Length)
+
+- Class: cmd_question
+  Output: Import all less Species variables
+  CorrectAnswer: select(iris, -Species)
+  AnswerTests: omnitest(correctExpr='select(iris, -Species)')
+  Hint: Prova con select(iris, -Species)
+
+  
+- Class: cmd_question
+  Output: Create a new septot variable that adds the Sepal Length and Sepal.Width columns of the iris using the mutate() function
+  CorrectAnswer: mutate(iris, septot = Sepal.Length+Sepal.Width)
+  AnswerTests: omnitest(correctExpr='mutate(iris, septot = Sepal.Length+Sepal.Width)')
+  Hint: Prova con mutate(iris, septot = Sepal.Length+Sepal.Width)
+
+- Class: cmd_question
+  Output: Select all “setosa” cases from the Species variable using the filter() function
+  CorrectAnswer: filter(iris, Species == "setosa")
+  AnswerTests: omnitest(correctExpr='filter(iris, Species == "setosa")')
+  Hint: Prova con filter(iris, Species == "setosa")
+  
+- Class: cmd_question
+  Output: Sort all cases according to the Petal.Length variable with the arrange() function
+  CorrectAnswer: arrange(iris, Petal.Length)
+  AnswerTests: omnitest(correctExpr='arrange(iris, Petal.Length)')
+  Hint: Prova con arrange(iris, Petal.Length)
+  
+
+
+
+
+

@@ -1,0 +1,42 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 7
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: In this lesson we will see some simple concept for file uploading
+  
+
+- Class: mult_question
+  Output: Which of these features allow us to upload a .csv file without importing other packages?
+  AnswerChoices: read.csv(); str() ; read.xlsx()
+  CorrectAnswer: read.csv()
+  AnswerTests: omnitest(correctVal='read.csv()')
+  Hint: read.csv()
+  
+- Class: mult_question
+  Output: What feature allows us to manually enter data?
+  AnswerChoices: scan(); read_delim() ; gdata
+  CorrectAnswer: scan()
+  AnswerTests: omnitest(correctVal='scan()')
+  Hint: scan()
+
+- Class: mult_question
+  Output: Which package allows us to import data from SPSS?
+  AnswerChoices: haven; read_delim() ; tuneR
+  CorrectAnswer: haven
+  AnswerTests: omnitest(correctVal='haven')
+  Hint: haven
+
+- Class: mult_question
+  Output: Which feature allows us to save a .csv file on our computer?
+  AnswerChoices: write.csv(); write_foreign() ; ggplot
+  CorrectAnswer: write.csv()
+  AnswerTests: omnitest(correctVal='write.csv()')
+  Hint: write.csv()
+
+- Class: text
+  Output: Excellent! See you in the next lesson

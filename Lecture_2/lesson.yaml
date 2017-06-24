@@ -1,0 +1,133 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 2
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+
+- Class: text
+  Output: Welcome back! Let us create some vectors and carry out operations on them
+
+- Class: text
+  Output: So far, we created objects containing single numbers, now we're starting to create some more challenging objects
+  
+- Class: text
+  Output: Press ENTER for the next questions. If you have troubles with a question, you can always enter the skip() command to get the solution and skip to the next
+  
+- Class: cmd_question
+  Output: Let's review now! First, create a numeric vector containing numbers 2, 5, 9, 14 that you will call vn. Remember to use the c() function
+  CorrectAnswer: vn <- c(2, 5, 9, 14)
+  AnswerTests: omnitest(correctExpr='vn <- c(2, 5, 9, 14)')
+  Hint: Enter vn <- c(2, 5, 9, 14)
+  
+- Class: text
+  Output: Great! Let's go ahead with a vector of types
+  
+- Class: cmd_question
+  Output: Now create a vector of types which you will call vc, containing the cities of Naples, Como, and Rovigo. Remember to use the c() function and put the strings in quotation marks
+  CorrectAnswer: vc <- c("Napoli", "Como", "Rovigo")
+  AnswerTests: omnitest(correctExpr='vc <- c("Napoli", "Como", "Rovigo")')
+  Hint: Enter vc <- c("Napoli", "Como", "Rovigo")
+  
+  
+- Class: cmd_question
+  Output: Now we create a logical vl vector containing 2 FALSE and 3 TRUE
+  CorrectAnswer: vl <- c(FALSE, FALSE, TRUE, TRUE, TRUE)
+  AnswerTests: omnitest(correctExpr='vl <- c(FALSE, FALSE, TRUE, TRUE, TRUE)')
+  Hint: Enter vl <- c(FALSE, FALSE, TRUE, TRUE, TRUE)
+
+- Class: cmd_question
+  Output: Let’s reprint our vn vector of numbers
+  CorrectAnswer: vn
+  AnswerTests: omnitest(correctExpr='vn')
+  Hint: Enter vn
+  
+- Class: cmd_question
+  Output: Let's calculate the average on vn using the mean() function
+  CorrectAnswer: mean(vn)
+  AnswerTests: omnitest(correctExpr='mean(vn)')
+  Hint: Enter mean(vn)
+  
+- Class: cmd_question
+  Output: We create another vn2 numeric vector containing numbers 4, 7, 11, 21. Remember to use the c() function
+  CorrectAnswer: vn2 <- c(4, 7, 11, 21)
+  AnswerTests: omnitest(correctExpr='vn2 <- c(4, 7, 11, 21)')
+  Hint: Enter vn2 <- c(4, 7, 11, 21)
+  
+- Class: cmd_question
+  Output: Now let’s merge the two vectors
+  CorrectAnswer: vn + vn2
+  AnswerTests: omnitest(correctExpr='vn + vn2')
+  Hint: Enter vn + vn2
+  
+- Class: cmd_question
+  Output: Let’s reorder the vn2 vector using the sort() function
+  CorrectAnswer: sort(vn2)
+  AnswerTests: omnitest(correctExpr='sort(vn2)')
+  Hint: Enter sort(vn2)
+
+- Class: text
+  Output: Okay, we merged two vectors and reorganized a vector!
+  
+- Class: cmd_question
+  Output: Now let's select the second element from the vc vector
+  CorrectAnswer: vc[2]
+  AnswerTests: omnitest(correctExpr='vc[2]')
+  Hint: Enter vc[2]
+  
+- Class: cmd_question
+  Output: What if we wanted to select the first and the third element?
+  CorrectAnswer: vc[c(1, 3)]
+  AnswerTests: omnitest(correctExpr='vc[c(1, 3)]')
+  Hint: Enter  vc[c(1, 3)]
+  
+- Class: cmd_question
+  Output: Let's now use the seq() function to create a list of numbers from 1 to 20, which we will call seq1
+  CorrectAnswer: seq1 <- seq(1, 20)
+  AnswerTests: omnitest(correctExpr='seq1 <- seq(1, 20)')
+  Hint: Enter seq1 <- seq(1, 20)
+  
+
+- Class: cmd_question
+  Output: From our object, we extract elements, from the fifth to the ninth
+  CorrectAnswer: seq1[5:9]
+  AnswerTests: omnitest(correctExpr='seq1[5:9]')
+  Hint: Enter seq1[5:9]
+  
+- Class: cmd_question
+  Output: Always starting from our seq1 object, we replace the second element with the "new object" string
+  CorrectAnswer: seq1[2] = "nuovo oggetto"
+  AnswerTests: omnitest(correctExpr='seq1[2] = "nuovo oggetto"')
+  Hint: Enter seq1[2] = "nuovo oggetto"
+  
+- Class: cmd_question
+  Output: We print our to seq1 object, in order to check
+  CorrectAnswer: print(seq1)
+  AnswerTests: omnitest(correctExpr='print(seq1)')
+  Hint: Enter print(seq1)
+  
+- Class: cmd_question
+  Output: Let's resume our numeric vector vn. Let's verify its nature with the is.vector() function
+  CorrectAnswer: is.vector(vn)
+  AnswerTests: omnitest(correctExpr='is.vector(vn)')
+  Hint: Enter is.vector(vn)
+  
+- Class: cmd_question
+  Output: Now let's change the nature of the vn vector using the as.character() function. We then save the result in the vnc object
+  CorrectAnswer: vnc <- as.character(vn)
+  AnswerTests: omnitest(correctExpr='vnc <- as.character(vn)')
+  Hint: Enter vnc <- as.character(vn)
+
+- Class: cmd_question
+  Output: We print the vnc object, this time without using the print() function
+  CorrectAnswer: vnc
+  AnswerTests: omnitest(correctExpr='vnc')
+  Hint: Enter vnc
+
+- Class: text
+  Output: Did you see? Each element of the new vector is separated by quotes, which identify it as a type vector!
+  
+- Class: text
+  Output: We stop here for now. See you in the next lesson!

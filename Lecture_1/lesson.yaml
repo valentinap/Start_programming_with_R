@@ -1,0 +1,86 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 1
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: Welcome to this introductory course to programming with R, Lesson 1. This course will teach you the basis of R with lessons and easy exercises
+- Class: text
+  Output: Press enter for the next question. If you have roubles with one question, you can always insert the skip() command for the solution and skip to the following one
+
+- Class: text
+  Output: In this first session we will learn to make the first operations and get accustomed to the basic objects 
+  
+- Class: text
+  Output: Let’s start with the basic operations
+  
+- Class: text
+  Output: Ready? Let’s go!
+  
+- Class: text
+  Output: The simplest thing we can do with R are some small mathematical operations
+
+- Class: cmd_question
+  Output: Inserisci 5 + 3
+  CorrectAnswer: 5 + 3
+  AnswerTests: omnitest(correctExpr='5 + 3')
+  Hint: Enter 5 + 3
+ 
+- Class: cmd_question
+  Output: Let’s go for another one! Enter 9 * 7
+  CorrectAnswer: 9 * 7
+  AnswerTests: omnitest(correctExpr='9 * 7')
+  Hint: Enter 9 * 7 
+  
+- Class: cmd_question
+  Output: And now for the last one! Enter 12 - 2
+  CorrectAnswer: 12 - 2
+  AnswerTests: omnitest(correctExpr='12 - 2')
+  Hint: Enter 12 - 2 
+
+- Class: text
+  Output: That’s greato
+  
+- Class: text
+  Output: Now, let’s create our first object
+
+- Class: cmd_question
+  Output: Create an x object featuring number 28
+  CorrectAnswer: x <- 28
+  AnswerTests: omnitest(correctExpr='x <- 28')
+  Hint: Enter x <- 28 
+
+- Class: text
+  Output: That’s great! Let’s carry on
+
+  
+- Class: cmd_question
+  Output: Create an object y featuring multiplication between 2 and 3
+  CorrectAnswer: y <- 2 * 3
+  AnswerTests: omnitest(correctExpr='y <- 2 * 3')
+  Hint: Enter y <- 2 * 3 
+  
+- Class: cmd_question
+  Output: Now, let us "print" our y object using the print() function
+  CorrectAnswer: print(y)
+  AnswerTests: omnitest(correctExpr='print(y)')
+  Hint: Enter print(y)
+
+
+- Class: text
+  Output: Now, with the "combine", c() function, let us create a z object containing a list of numbers
+ 
+- Class: cmd_question
+  Output: Let us create a z object with the 5, 9, 12, 23, 45, 67 numbers
+  CorrectAnswer: z <- c(5, 9, 12, 23, 45, 67)
+  AnswerTests: omnitest(correctExpr='z <- c(5, 9, 12, 23, 45, 67)')
+  Hint: Enter z <- c(5, 9, 12, 23, 45, 67)
+  
+- Class: text
+  Output: Great job!
+
+- Class: text
+  Output: See you on the next lesson!

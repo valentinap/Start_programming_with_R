@@ -1,0 +1,54 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 5
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: In this lesson you will create some functions. A function takes or creates an object and performs operations on it, returning a result
+  
+- Class: text
+  Output: Ready? Let's begin!
+  
+- Class: cmd_question
+  Output: We have used functions many times, for example to rotate an array (t()), to create an object (c()), etcetera. For example, we can get today’s date and time with the Sys.time() function. Try this below
+  CorrectAnswer: Sys.time()
+  AnswerTests: omnitest(correctExpr='Sys.time()')
+  Hint: Enter Sys.time()
+  
+- Class: cmd_question
+  Output: Let's take another example. Use the mean() function to calculate the average of 7, 9, 14, 25. Do not forget the combine c() function
+  CorrectAnswer: mean(c(7, 9, 14, 25))
+  AnswerTests: omnitest(correctExpr='mean(c(7, 9, 14, 25))')
+  Hint: Enter mean(c(7, 9, 14, 25))
+  
+- Class: cmd_question
+  Output: Now create an object x that contains the number 9
+  CorrectAnswer: x <- 9
+  AnswerTests: omnitest(correctExpr='x <- 9')
+  Hint: Enter x <- 9
+  
+- Class: cmd_question
+  Output: Now create an object y that contains the number 15
+  CorrectAnswer: y <- 14
+  AnswerTests: omnitest(correctExpr='y <- 14')
+  Hint: Enter y <- 14
+  
+- Class: script
+  Output: Create a fun1 function that returns the sum of x and y
+  AnswerTests: fun1()
+  Hint: 
+  Script: customTests.R
+  
+- Class: cmd_question
+  Output: Apply fun1 to the two x and y objects
+  CorrectAnswer: fun1(x, y)
+  AnswerTests: omnitest(correctExpr='fun1(x, y)')
+  Hint: Enter fun1(x, y)
+  
+- Class: text
+  Output: You've just created your first function! 
+  
+

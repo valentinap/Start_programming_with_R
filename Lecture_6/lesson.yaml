@@ -1,0 +1,103 @@
+- Class: meta
+  Course: Start programming with R
+  Lesson: Lezione 6
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+  
+- Class: text
+  Output: In this lesson we will see some more concepts on subseting, random generations and other useful elements
+  
+- Class: cmd_question
+  Output: Discover your working directory with the getwd() function
+  CorrectAnswer: getwd()
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: Enter getwd()
+  
+- Class: text
+  Output: To set up a work directory, we can use the setwd() command with the address of the new directory
+  
+
+- Class: text
+  Output: To install a package we use the install.packages("package_name") command
+  
+- Class: text
+  Output: To load a package we use library(package) or require(package)
+
+- Class: text
+  Output: On R there are a lot of datasets we can use for tests
+  
+- Class: cmd_question
+  Output: Create an iris object by writing iris <- iris
+  CorrectAnswer: iris <- iris
+  AnswerTests: omnitest(correctExpr='iris <- iris')
+  Hint: Enter iris <- iris
+  
+- Class: cmd_question
+  Output: Use the dim() function on the iris dataset to find the number of cases and the variables
+  CorrectAnswer: dim(iris)
+  AnswerTests: omnitest(correctExpr='dim(iris)')
+  Hint: Enter dim(iris)
+  
+- Class: cmd_question
+  Output: Use the summary() function on the iris dataset to find out more about the data
+  CorrectAnswer: summary(iris)
+  AnswerTests: omnitest(correctExpr='summary(iris)')
+  Hint: Enter summary(iris)
+  
+- Class: cmd_question
+  Output: Print the first 8 cases of the iris dataset using the head() function
+  CorrectAnswer: head(iris, 8)
+  AnswerTests: omnitest(correctExpr='head(iris, 8)')
+  Hint: Enter head(iris, 8)
+  
+- Class: cmd_question
+  Output: Find variables names with the names() function
+  CorrectAnswer: names(iris)
+  AnswerTests: omnitest(correctExpr='names(iris)')
+  Hint: Enter names(iris)
+  
+- Class: cmd_question
+  Output: Now let's create a random sam1 distribution with the sample() function. The object must contain 50 numbers between 1 and 375
+  CorrectAnswer: sam1 <- sample(1:375, 50)
+  AnswerTests: omnitest(correctExpr='sam1 <- sample(1:375, 50)')
+  Hint: Enter sam1 <- sample(1:375, 50)
+  
+- Class: cmd_question
+  Output: The rnorm() function creates a normal distribution. The hist() function creates a histogram. They both use a random extraction of 10,000 items on 50 bins. You do not have to create an object
+  CorrectAnswer: hist(rnorm(10000), breaks = 50)
+  AnswerTests: omnitest(correctExpr='hist(rnorm(10000), breaks = 50)')
+  Hint: Enter hist(rnorm(10000), breaks = 50)
+  
+- Class: cmd_question
+  Output: Using the subset() function, extract all cases of the silky family from the iris dataset. Save them in the setosa object
+  CorrectAnswer: setosa <- subset(iris, Species== "setosa")
+  AnswerTests: omnitest(correctExpr='setosa <- subset(iris, Species== "setosa")')
+  Hint: Enter setosa <- subset(iris, Species== "setosa")
+ 
+- Class: cmd_question
+  Output: From the iris object, use which() to extract the cases of the Sepal.Lenght variable that are bigger than 4.5
+  CorrectAnswer: iris[which(iris$Sepal.Length > 4.5),]
+  AnswerTests: omnitest(correctExpr='iris[which(iris$Sepal.Length > 4.5),]')
+  Hint: Enter iris[which(iris$Sepal.Length > 4.5),]
+  
+- Class: cmd_question
+  Output: Now use the lapply() function to get the average of the first four iris variables as a list
+  CorrectAnswer: lapply(iris[, 1:4], mean)
+  AnswerTests: omnitest(correctExpr='lapply(iris[, 1:4], mean)')
+  Hint: Enter lapply(iris[, 1:4], mean)
+  
+- Class: cmd_question
+  Output:We use apply() to get the average of the rows, always on the first 4 iris variables
+  CorrectAnswer: apply(iris[, 1:4], 1, mean)
+  AnswerTests: omnitest(correctExpr='apply(iris[, 1:4], 1, mean)')
+  Hint: Enter apply(iris[, 1:4], 1, mean)
+
+- Class: cmd_question
+  Output: We use apply() to get the average columns for the first 4 iris variables
+  CorrectAnswer: apply(iris[, 1:4], 2, mean)
+  AnswerTests: omnitest(correctExpr='apply(iris[, 1:4], 2, mean)')
+  Hint: Enter apply(iris[, 1:4], 2, mean)
+  
+
