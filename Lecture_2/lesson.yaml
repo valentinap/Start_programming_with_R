@@ -98,9 +98,9 @@
   
 - Class: cmd_question
   Output: Always starting from our seq1 object, we replace the second element with the "new object" string
-  CorrectAnswer: seq1[2] = "nuovo oggetto"
-  AnswerTests: omnitest(correctExpr='seq1[2] = "nuovo oggetto"')
-  Hint: Enter seq1[2] = "nuovo oggetto"
+  CorrectAnswer: seq1[2] = "new object"
+  AnswerTests: omnitest(correctExpr='seq1[2] = "new object"')
+  Hint: Enter seq1[2] = "new object"
   
 - Class: cmd_question
   Output: We print our to seq1 object, in order to check
